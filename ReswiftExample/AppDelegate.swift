@@ -9,15 +9,16 @@
 import UIKit
 import ReSwift
 
+let mainStore = Store<AppState>(
+    reducer: counterReducer,
+    state: nil
+)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let mainStore = Store<AppState>(
-            reducer: counterReducer,
-            state: nil
-    )
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         let mainViewController = ViewController(nibName: "ViewController", bundle: nil)

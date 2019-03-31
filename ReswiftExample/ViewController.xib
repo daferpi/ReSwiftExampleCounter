@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="ReswiftExample" customModuleProvider="target">
             <connections>
+                <outlet property="counterLbl" destination="zBV-S7-TLB" id="8xk-wr-Ao1"/>
+                <outlet property="minusBtn" destination="la3-Mc-I29" id="fin-Pq-2aM"/>
+                <outlet property="plusBtn" destination="24t-PN-peh" id="6FQ-VC-qHX"/>
                 <outlet property="view" destination="iN0-l3-epB" id="8u0-Kl-DIi"/>
             </connections>
         </placeholder>
@@ -20,13 +23,47 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24t-PN-peh">
-                    <rect key="frame" x="142" y="314" width="90" height="38"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Sara"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24t-PN-peh" userLabel="plusBtn">
+                    <rect key="frame" x="21" y="314" width="90" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="HJW-C3-ix7"/>
+                        <constraint firstAttribute="height" constant="38" id="Jff-pL-yOD"/>
+                    </constraints>
+                    <state key="normal" title="Plus"/>
+                    <connections>
+                        <action selector="plusAction:" destination="-1" eventType="touchUpInside" id="R4m-1a-ji0"/>
+                    </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="la3-Mc-I29" userLabel="minusBtn">
+                    <rect key="frame" x="269" y="314" width="90" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="3Yd-88-hKN"/>
+                        <constraint firstAttribute="height" constant="38" id="W2f-R8-val"/>
+                    </constraints>
+                    <state key="normal" title="Minus"/>
+                    <connections>
+                        <action selector="minusAction:" destination="-1" eventType="touchUpInside" id="7MY-aH-pn1"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBV-S7-TLB" userLabel="counterLbl">
+                    <rect key="frame" x="16" y="228" width="343" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="la3-Mc-I29" firstAttribute="top" secondItem="zBV-S7-TLB" secondAttribute="bottom" constant="65" id="39Y-ex-F3I"/>
+                <constraint firstItem="24t-PN-peh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="21" id="Bfd-Jg-TiP"/>
+                <constraint firstItem="zBV-S7-TLB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="HXN-HD-3ML"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="la3-Mc-I29" secondAttribute="trailing" constant="16" id="NNa-VN-203"/>
+                <constraint firstItem="zBV-S7-TLB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="208" id="cFO-M0-TjO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="la3-Mc-I29" secondAttribute="bottom" constant="315" id="nlh-8P-mV0"/>
+                <constraint firstItem="24t-PN-peh" firstAttribute="top" secondItem="zBV-S7-TLB" secondAttribute="bottom" constant="65" id="qwD-ES-naU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="24t-PN-peh" secondAttribute="bottom" constant="315" id="rAH-cN-5c9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zBV-S7-TLB" secondAttribute="trailing" constant="16" id="sdf-qU-6vn"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
         </view>
