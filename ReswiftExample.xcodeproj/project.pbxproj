@@ -357,7 +357,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ReswiftExample/Pods-ReswiftExample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ReswiftExample/Pods-ReswiftExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -368,7 +368,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReswiftExample/Pods-ReswiftExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReswiftExample/Pods-ReswiftExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A6CB3C2EF857E7F4F4B2152D /* [CP] Check Pods Manifest.lock */ = {
